@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Galvin&#39;s blog</title>
+    <title>开源代码的编译与打包 | Galvin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Galvin Yang">
     
-    <meta name="description" content="开源代码的编译与打包本文以hadoop-yarn为例，介绍从HortonWorks的hadoop源代码编译到重新打包成RPM的过程。
+    <meta name="description" content="本文以hadoop-yarn为例，介绍从HortonWorks的hadoop源代码编译到重新打包成RPM的过程。
 Hortonworks源代码下载
 使用git下载源代码：
-Hortonworks hadoop官方github地址 https://github.com/horton">
+Hortonworks hadoop官方github地址 https://github.com/hortonworks/hado">
     
     
     
@@ -39,7 +39,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 				<h1 class="site-name"><a href="/" title="Galvin&#39;s blog">Galvin&#39;s blog</a></h1>
 				<h2 class="blog-motto">Embrace Bigdata &amp; Cloud</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -52,7 +52,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -68,7 +68,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/30/rebuildrpm/" title="" itemprop="url"></a>
+      <a href="/2016/06/30/rebuildrpm/" title="开源代码的编译与打包" itemprop="url">开源代码的编译与打包</a>
   </h1>
   <p class="article-author">By
     
@@ -76,7 +76,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
     </p>
   <p class="article-time">
     <time datetime="2016-06-30T08:35:59.000Z" itemprop="datePublished">2016-06-30</time>
-    更新日期:<time datetime="2016-07-01T02:34:55.000Z" itemprop="dateModified">2016-07-01</time>
+    Updated:<time datetime="2016-07-01T02:36:23.000Z" itemprop="dateModified">2016-07-01</time>
     
   </p>
 </header>
@@ -84,11 +84,11 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开源代码的编译与打包"><span class="toc-number">1.</span> <span class="toc-text">开源代码的编译与打包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hortonworks源代码下载"><span class="toc-number">1.1.</span> <span class="toc-text">Hortonworks源代码下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备编译环境"><span class="toc-number">1.2.</span> <span class="toc-text">准备编译环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码编译"><span class="toc-number">1.3.</span> <span class="toc-text">源代码编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hortonworks官方RPM"><span class="toc-number">1.4.</span> <span class="toc-text">安装Hortonworks官方RPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新官方rpm安装后的文件"><span class="toc-number">1.5.</span> <span class="toc-text">更新官方rpm安装后的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用rpmrebuild将更新后的文件重新打包成rpm"><span class="toc-number">1.6.</span> <span class="toc-text">使用rpmrebuild将更新后的文件重新打包成rpm</span></a></li></ol></li></ol>
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hortonworks源代码下载"><span class="toc-number">1.</span> <span class="toc-text">Hortonworks源代码下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备编译环境"><span class="toc-number">2.</span> <span class="toc-text">准备编译环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码编译"><span class="toc-number">3.</span> <span class="toc-text">源代码编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hortonworks官方RPM"><span class="toc-number">4.</span> <span class="toc-text">安装Hortonworks官方RPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新官方rpm安装后的文件"><span class="toc-number">5.</span> <span class="toc-text">更新官方rpm安装后的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用rpmrebuild将更新后的文件重新打包成rpm"><span class="toc-number">6.</span> <span class="toc-text">使用rpmrebuild将更新后的文件重新打包成rpm</span></a></li></ol>
 		</div>
 		
-		<h1 id="开源代码的编译与打包"><a href="#开源代码的编译与打包" class="headerlink" title="开源代码的编译与打包"></a>开源代码的编译与打包</h1><p>本文以hadoop-yarn为例，介绍从HortonWorks的hadoop<strong>源代码编译</strong>到<strong>重新打包成RPM</strong>的过程。</p>
+		<p>本文以hadoop-yarn为例，介绍从HortonWorks的hadoop<strong>源代码编译</strong>到<strong>重新打包成RPM</strong>的过程。</p>
 <h2 id="Hortonworks源代码下载"><a href="#Hortonworks源代码下载" class="headerlink" title="Hortonworks源代码下载"></a>Hortonworks源代码下载</h2><ul>
 <li>使用git下载源代码：<ul>
 <li>Hortonworks hadoop官方github地址 <a href="https://github.com/hortonworks/hadoop-release.git" target="_blank" rel="external">https://github.com/hortonworks/hadoop-release.git</a></li>
@@ -189,7 +189,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/06/30/rebuildrpm/" data-title="Galvin&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/06/30/rebuildrpm/" data-title="开源代码的编译与打包 | Galvin&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -211,15 +211,15 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开源代码的编译与打包"><span class="toc-number">1.</span> <span class="toc-text">开源代码的编译与打包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hortonworks源代码下载"><span class="toc-number">1.1.</span> <span class="toc-text">Hortonworks源代码下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备编译环境"><span class="toc-number">1.2.</span> <span class="toc-text">准备编译环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码编译"><span class="toc-number">1.3.</span> <span class="toc-text">源代码编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hortonworks官方RPM"><span class="toc-number">1.4.</span> <span class="toc-text">安装Hortonworks官方RPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新官方rpm安装后的文件"><span class="toc-number">1.5.</span> <span class="toc-text">更新官方rpm安装后的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用rpmrebuild将更新后的文件重新打包成rpm"><span class="toc-number">1.6.</span> <span class="toc-text">使用rpmrebuild将更新后的文件重新打包成rpm</span></a></li></ol></li></ol>
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hortonworks源代码下载"><span class="toc-number">1.</span> <span class="toc-text">Hortonworks源代码下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备编译环境"><span class="toc-number">2.</span> <span class="toc-text">准备编译环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码编译"><span class="toc-number">3.</span> <span class="toc-text">源代码编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hortonworks官方RPM"><span class="toc-number">4.</span> <span class="toc-text">安装Hortonworks官方RPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新官方rpm安装后的文件"><span class="toc-number">5.</span> <span class="toc-text">更新官方rpm安装后的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用rpmrebuild将更新后的文件重新打包成rpm"><span class="toc-number">6.</span> <span class="toc-text">使用rpmrebuild将更新后的文件重新打包成rpm</span></a></li></ol>
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -227,7 +227,7 @@ Hortonworks hadoop官方github地址 https://github.com/horton">
   
 
   <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+	<a href="null" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
