@@ -5,39 +5,29 @@
   <meta charset="UTF-8">
   
     <title>Hexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="John Doe">
     
-
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-
     
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
     
     
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
     <header>
-      
-<div>
+      <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Hexo" title="Hexo"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
 			</div>
 			
 			<div id="textlogo">
@@ -48,19 +38,16 @@
 			</a></div>
 			<nav class="animated">
 				<ul>
-					<ul>
-					 
+					
 						<li><a href="/">Home</a></li>
 					
 						<li><a href="/archives">Archives</a></li>
 					
-						<li><a href="/about">About</a></li>
-					
 					<li>
- 					
+					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -68,214 +55,42 @@
 				</ul>
 			</nav>			
 </div>
+
     </header>
     <div id="container">
       <div id="main">
 
-   
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2016/06/30/hello-world/" title="Hello World" itemprop="url">
+  
+    <h1 itemprop="name">Hello World</h1>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+     
+           <p itemprop="description" >Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
+        
     
-      <a href="/2016/06/30/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-30T10:15:27.000Z" itemprop="datePublished"> Published 2016-06-30</time>
+    <time datetime="2016-06-30T10:15:27.000Z" itemprop="datePublished">2016-06-30</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2016/06/30/rebuildrpm/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
     
-  </p>
-</header>
-    <div class="article-content">
+     
+           <p itemprop="description" >#开源代码的编译与打包本文以hadoop-yarn为例，介绍从HortonWorks的hadoop源代码编译到重新打包成RPM的过程。
+##Hortonworks源代码下载
+
+使用git下载源代码：
+Hortonworks hadoop官方github地址 https://git</p>
         
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/30/rebuildrpm/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-30T08:35:59.000Z" itemprop="datePublished"> Published 2016-06-30</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>#开源代码的编译与打包<br>本文以hadoop-yarn为例，介绍从HortonWorks的hadoop<strong>源代码编译</strong>到<strong>重新打包成RPM</strong>的过程。</p>
-<p>##Hortonworks源代码下载</p>
-<ul>
-<li>使用git下载源代码：<ul>
-<li>Hortonworks hadoop官方github地址 <a href="https://github.com/hortonworks/hadoop-release.git" target="_blank" rel="external">https://github.com/hortonworks/hadoop-release.git</a></li>
-<li>使用<code>git clone &lt;url&gt;</code>下载项目到本地，使用<code>git tag</code>列出所有发行版本，使用<code>git checkout &lt;tag&gt;</code>切换到目标版本。</li>
-</ul>
-</li>
-</ul>
-<p>##准备编译环境</p>
-<ul>
-<li>安装building.txt列出的所有依赖包，例如编译hadoop依赖的包如下：</li>
-</ul>
-<blockquote>
-<p>Requirements:</p>
-<ul>
-<li>Unix System</li>
-<li>JDK 1.7+</li>
-<li>Maven 3.0 or later</li>
-<li>Findbugs 1.3.9 (if running findbugs)</li>
-<li>ProtocolBuffer 2.5.0</li>
-<li>CMake 2.6 or newer (if compiling native code), must be 3.0 or newer on Mac</li>
-<li>Zlib devel (if compiling native code)</li>
-<li>openssl devel ( if compiling native hadoop-pipes and to get the best HDFS encryption performance )</li>
-<li>Jansson C XML parsing library ( if compiling libwebhdfs )</li>
-<li>Linux FUSE (Filesystem in Userspace) version 2.6 or above ( if compiling fuse_dfs )</li>
-<li>Internet connection for first build (to fetch all Maven and Hadoop dependencies)</li>
-</ul>
-</blockquote>
-<p>##源代码编译</p>
-<ul>
-<li><p>一般使用maven进行编译，最后压缩为tar.gz包</p>
-<ul>
-<li><p>使用maven进行编译与打包，主要使用maven package进行打包</p>
-<blockquote>
-<p>   Maven build goals:</p>
-<ul>
-<li>Clean                     : mvn clean</li>
-<li>Compile                   : mvn compile [-Pnative]</li>
-<li>Run tests                 : mvn test [-Pnative]</li>
-<li>Create JAR                : mvn package</li>
-<li>Run findbugs              : mvn compile findbugs:findbugs</li>
-<li>Run checkstyle            : mvn compile checkstyle:checkstyle</li>
-<li>Install JAR in M2 cache   : mvn install</li>
-<li>Deploy JAR to Maven repo  : mvn deploy</li>
-<li>Run clover                : mvn test -Pclover [-DcloverLicenseLocation=${user.name}/.clover.license]</li>
-<li>Run Rat                   : mvn apache-rat:check</li>
-<li>Build javadocs            : mvn javadoc:javadoc</li>
-<li>Build distribution        : mvn package [-Pdist][-Pdocs][-Psrc][-Pnative][-Dtar]</li>
-<li>Change Hadoop version     : mvn versions:set -DnewVersion=NEWVERSION</li>
-</ul>
-</blockquote>
-</li>
-<li><p>maven编译参数说明：</p>
-<blockquote>
-<pre><code>Build options:
-</code></pre><ul>
-<li>Use -Pnative to compile/bundle native code</li>
-<li>Use -Pdocs to generate &amp; bundle the documentation in the distribution (using -Pdist)</li>
-<li>Use -Psrc to create a project source TAR.GZ</li>
-<li>Use -Dtar to create a TAR with the distribution (using -Pdist)</li>
-</ul>
-</blockquote>
-</li>
-<li><p>在hadoop—yarn工程中，container-executor需要进行本地编译，因此需要在打包时指定native profile。对于hadoop-yarn, 完整的打包命令为<code>mvn package -Pdist,native -DskipTests -Dtar</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<p>##安装Hortonworks官方RPM</p>
-<ul>
-<li>使用Ambari或yum安装希望重新打包的服务（本例中的hadoop-yarn），或手动安装rpm<ul>
-<li>当依赖关系比较复杂时，我们可以使用<code>rpm -ivh *.rpm --nodeps</code>忽略依赖关系单独安装rpm包，用来查看rpm的安装目录结构</li>
-</ul>
-</li>
-<li>安装完成后进入安装目录，分析该目录与上一步中编译出的项目文件目录的区别，编写脚本，将我们自己编译源代码生成的文件替换到相应的文件位置。<ul>
-<li>例如在hadoop-yarn项目中，我们自己编译好的项目目录结构如下：  </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div></pre></td><td class="code"><pre><div class="line">├── bin</div><div class="line">│   ├── container-executor</div><div class="line">│   ├── test-container-executor</div><div class="line">│   ├── yarn</div><div class="line">│   └── yarn.cmd</div><div class="line">├── etc</div><div class="line">│   └── hadoop</div><div class="line">│       ├── capacity-scheduler.xml</div><div class="line">│       ├── container-executor.cfg</div><div class="line">│       ├── slaves</div><div class="line">│       ├── yarn-env.sh</div><div class="line">│       └── yarn-site.xml</div><div class="line">├── libexec</div><div class="line">│   ├── yarn-config.cmd</div><div class="line">│   └── yarn-config.sh</div><div class="line">├── sbin</div><div class="line">│   ├── start-yarn.cmd</div><div class="line">│   ├── start-yarn.sh</div><div class="line">│   ├── stop-yarn.cmd</div><div class="line">│   ├── stop-yarn.sh</div><div class="line">│   ├── yarn-daemon.sh</div><div class="line">│   └── yarn-daemons.sh</div><div class="line">└── share</div><div class="line">    ├── doc</div><div class="line">    │   └── hadoop</div><div class="line">    │       └── yarn</div><div class="line">    │           └── CHANGES.txt</div><div class="line">    └── hadoop</div><div class="line">        └── yarn</div><div class="line">            ├── hadoop-yarn-api-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-applications-distributedshell-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-applications-unmanaged-am-launcher-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-client-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-common-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-registry-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-applicationhistoryservice-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-common-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-nodemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-resourcemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-sharedcachemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-tests-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-timeline-plugins-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── hadoop-yarn-server-web-proxy-2.7.1.2.4.0.0-169.jar</div><div class="line">            ├── lib</div><div class="line">            │   ├── activation-1.1.jar</div><div class="line">            │   ├── aopalliance-1.0.jar</div><div class="line">            │   ├── apacheds-i18n-2.0.0-M15.jar</div><div class="line">            │   ├── apacheds-kerberos-codec-2.0.0-M15.jar</div><div class="line">            │   ├── api-asn1-api-1.0.0-M20.jar</div><div class="line">            │   ├── api-util-1.0.0-M20.jar</div><div class="line">            │   ├── asm-3.2.jar</div><div class="line">            │   ├── avro-1.7.4.jar</div><div class="line">            │   ├── commons-beanutils-1.7.0.jar</div><div class="line">            │   ├── commons-beanutils-core-1.8.0.jar</div><div class="line">            │   ├── commons-cli-1.2.jar</div><div class="line">            │   ├── commons-codec-1.4.jar</div><div class="line">            │   ├── commons-collections-3.2.2.jar</div><div class="line">            │   ├── commons-compress-1.4.1.jar</div><div class="line">            │   ├── commons-configuration-1.6.jar</div><div class="line">            │   ├── commons-digester-1.8.jar</div><div class="line">            │   ├── commons-httpclient-3.1.jar</div><div class="line">            │   ├── commons-io-2.4.jar</div><div class="line">            │   ├── commons-lang-2.6.jar</div><div class="line">            │   ├── commons-logging-1.1.3.jar</div><div class="line">            │   ├── commons-math3-3.1.1.jar</div><div class="line">            │   ├── commons-net-3.1.jar</div><div class="line">            │   ├── curator-client-2.7.1.jar</div><div class="line">            │   ├── curator-framework-2.7.1.jar</div><div class="line">            │   ├── curator-recipes-2.7.1.jar</div><div class="line">            │   ├── fst-2.24.jar</div><div class="line">            │   ├── gson-2.2.4.jar</div><div class="line">            │   ├── guava-11.0.2.jar</div><div class="line">            │   ├── guice-3.0.jar</div><div class="line">            │   ├── guice-servlet-3.0.jar</div><div class="line">            │   ├── htrace-core-3.1.0-incubating.jar</div><div class="line">            │   ├── httpclient-4.2.5.jar</div><div class="line">            │   ├── httpcore-4.2.5.jar</div><div class="line">            │   ├── jackson-annotations-2.2.3.jar</div><div class="line">            │   ├── jackson-core-2.2.3.jar</div><div class="line">            │   ├── jackson-core-asl-1.9.13.jar</div><div class="line">            │   ├── jackson-databind-2.2.3.jar</div><div class="line">            │   ├── jackson-jaxrs-1.9.13.jar</div><div class="line">            │   ├── jackson-mapper-asl-1.9.13.jar</div><div class="line">            │   ├── jackson-xc-1.9.13.jar</div><div class="line">            │   ├── javassist-3.18.1-GA.jar</div><div class="line">            │   ├── javax.inject-1.jar</div><div class="line">            │   ├── java-xmlbuilder-0.4.jar</div><div class="line">            │   ├── jaxb-api-2.2.2.jar</div><div class="line">            │   ├── jaxb-impl-2.2.3-1.jar</div><div class="line">            │   ├── jersey-client-1.9.jar</div><div class="line">            │   ├── jersey-core-1.9.jar</div><div class="line">            │   ├── jersey-guice-1.9.jar</div><div class="line">            │   ├── jersey-json-1.9.jar</div><div class="line">            │   ├── jersey-server-1.9.jar</div><div class="line">            │   ├── jets3t-0.9.0.jar</div><div class="line">            │   ├── jettison-1.1.jar</div><div class="line">            │   ├── jetty-6.1.26.jar</div><div class="line">            │   ├── jetty-util-6.1.26.jar</div><div class="line">            │   ├── jsch-0.1.42.jar</div><div class="line">            │   ├── jsp-api-2.1.jar</div><div class="line">            │   ├── jsr305-3.0.0.jar</div><div class="line">            │   ├── leveldbjni-all-1.8.jar</div><div class="line">            │   ├── log4j-1.2.17.jar</div><div class="line">            │   ├── microsoft-windowsazure-storage-sdk-0.6.0.jar</div><div class="line">            │   ├── netty-3.6.2.Final.jar</div><div class="line">            │   ├── objenesis-2.1.jar</div><div class="line">            │   ├── paranamer-2.3.jar</div><div class="line">            │   ├── protobuf-java-2.5.0.jar</div><div class="line">            │   ├── servlet-api-2.5.jar</div><div class="line">            │   ├── snappy-java-1.0.4.1.jar</div><div class="line">            │   ├── stax-api-1.0-2.jar</div><div class="line">            │   ├── xmlenc-0.52.jar</div><div class="line">            │   ├── xz-1.0.jar</div><div class="line">            │   ├── zookeeper-3.4.6.2.4.0.0-169.jar</div><div class="line">            │   └── zookeeper-3.4.6.2.4.0.0-169-tests.jar</div><div class="line">            ├── sources</div><div class="line">            │   ├── hadoop-yarn-api-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-applications-distributedshell-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-applications-distributedshell-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-applications-unmanaged-am-launcher-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-applications-unmanaged-am-launcher-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-client-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-client-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-common-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-common-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-applicationhistoryservice-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-applicationhistoryservice-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-common-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-common-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-nodemanager-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-nodemanager-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-resourcemanager-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-resourcemanager-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-tests-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-tests-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            │   ├── hadoop-yarn-server-web-proxy-2.7.1.2.4.0.0-169-sources.jar</div><div class="line">            │   └── hadoop-yarn-server-web-proxy-2.7.1.2.4.0.0-169-test-sources.jar</div><div class="line">            └── test</div><div class="line">                └── hadoop-yarn-server-tests-2.7.1.2.4.0.0-169-tests.jar</div></pre></td></tr></table></figure>
-<ul>
-<li>Hortonworks官方rpm安装目录结构如下：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line">├── bin</div><div class="line">│   ├── container-executor</div><div class="line">│   ├── mapred</div><div class="line">│   ├── mapred.distro</div><div class="line">│   ├── yarn</div><div class="line">│   └── yarn.distro</div><div class="line">├── etc</div><div class="line">│   ├── hadoop -&gt; ../../hadoop/conf</div><div class="line">│   └── rc.d</div><div class="line">│       └── init.d</div><div class="line">├── hadoop-yarn-api-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-api.jar -&gt; hadoop-yarn-api-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-applications-distributedshell-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-applications-distributedshell.jar -&gt; hadoop-yarn-applications-distributedshell-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-applications-unmanaged-am-launcher-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-applications-unmanaged-am-launcher.jar -&gt; hadoop-yarn-applications-unmanaged-am-launcher-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-client-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-client.jar -&gt; hadoop-yarn-client-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-common-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-common.jar -&gt; hadoop-yarn-common-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-registry-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-registry.jar -&gt; hadoop-yarn-registry-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-applicationhistoryservice-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-applicationhistoryservice.jar -&gt; hadoop-yarn-server-applicationhistoryservice-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-common-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-common.jar -&gt; hadoop-yarn-server-common-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-nodemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-nodemanager.jar -&gt; hadoop-yarn-server-nodemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-resourcemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-resourcemanager.jar -&gt; hadoop-yarn-server-resourcemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-sharedcachemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-sharedcachemanager.jar -&gt; hadoop-yarn-server-sharedcachemanager-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-tests-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-tests.jar -&gt; hadoop-yarn-server-tests-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-timeline-plugins-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-timeline-plugins.jar -&gt; hadoop-yarn-server-timeline-plugins-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-web-proxy-2.7.1.2.4.0.0-169.jar</div><div class="line">├── hadoop-yarn-server-web-proxy.jar -&gt; hadoop-yarn-server-web-proxy-2.7.1.2.4.0.0-169.jar</div><div class="line">├── lib</div><div class="line">│   ├── activation-1.1.jar</div><div class="line">│   ├── aopalliance-1.0.jar</div><div class="line">│   ├── apacheds-i18n-2.0.0-M15.jar</div><div class="line">│   ├── apacheds-kerberos-codec-2.0.0-M15.jar</div><div class="line">│   ├── api-asn1-api-1.0.0-M20.jar</div><div class="line">│   ├── api-util-1.0.0-M20.jar</div><div class="line">│   ├── asm-3.2.jar</div><div class="line">│   ├── avro-1.7.4.jar</div><div class="line">│   ├── commons-beanutils-1.7.0.jar</div><div class="line">│   ├── commons-beanutils-core-1.8.0.jar</div><div class="line">│   ├── commons-cli-1.2.jar</div><div class="line">│   ├── commons-codec-1.4.jar</div><div class="line">│   ├── commons-collections-3.2.2.jar</div><div class="line">│   ├── commons-compress-1.4.1.jar</div><div class="line">│   ├── commons-configuration-1.6.jar</div><div class="line">│   ├── commons-digester-1.8.jar</div><div class="line">│   ├── commons-httpclient-3.1.jar</div><div class="line">│   ├── commons-io-2.4.jar</div><div class="line">│   ├── commons-lang-2.6.jar</div><div class="line">│   ├── commons-logging-1.1.3.jar</div><div class="line">│   ├── commons-math3-3.1.1.jar</div><div class="line">│   ├── commons-net-3.1.jar</div><div class="line">│   ├── curator-client-2.7.1.jar</div><div class="line">│   ├── curator-framework-2.7.1.jar</div><div class="line">│   ├── curator-recipes-2.7.1.jar</div><div class="line">│   ├── fst-2.24.jar</div><div class="line">│   ├── gson-2.2.4.jar</div><div class="line">│   ├── guava-11.0.2.jar</div><div class="line">│   ├── guice-3.0.jar</div><div class="line">│   ├── guice-servlet-3.0.jar</div><div class="line">│   ├── htrace-core-3.1.0-incubating.jar</div><div class="line">│   ├── httpclient-4.2.5.jar</div><div class="line">│   ├── httpcore-4.2.5.jar</div><div class="line">│   ├── jackson-annotations-2.2.3.jar</div><div class="line">│   ├── jackson-core-2.2.3.jar</div><div class="line">│   ├── jackson-core-asl-1.9.13.jar</div><div class="line">│   ├── jackson-databind-2.2.3.jar</div><div class="line">│   ├── jackson-jaxrs-1.9.13.jar</div><div class="line">│   ├── jackson-mapper-asl-1.9.13.jar</div><div class="line">│   ├── jackson-xc-1.9.13.jar</div><div class="line">│   ├── javassist-3.18.1-GA.jar</div><div class="line">│   ├── javax.inject-1.jar</div><div class="line">│   ├── java-xmlbuilder-0.4.jar</div><div class="line">│   ├── jaxb-api-2.2.2.jar</div><div class="line">│   ├── jaxb-impl-2.2.3-1.jar</div><div class="line">│   ├── jersey-client-1.9.jar</div><div class="line">│   ├── jersey-core-1.9.jar</div><div class="line">│   ├── jersey-guice-1.9.jar</div><div class="line">│   ├── jersey-json-1.9.jar</div><div class="line">│   ├── jersey-server-1.9.jar</div><div class="line">│   ├── jets3t-0.9.0.jar</div><div class="line">│   ├── jettison-1.1.jar</div><div class="line">│   ├── jetty-6.1.26.hwx.jar</div><div class="line">│   ├── jetty-util-6.1.26.hwx.jar</div><div class="line">│   ├── jsch-0.1.42.jar</div><div class="line">│   ├── jsp-api-2.1.jar</div><div class="line">│   ├── jsr305-3.0.0.jar</div><div class="line">│   ├── leveldbjni-all-1.8.jar</div><div class="line">│   ├── log4j-1.2.17.jar</div><div class="line">│   ├── microsoft-windowsazure-storage-sdk-0.6.0.jar</div><div class="line">│   ├── netty-3.6.2.Final.jar</div><div class="line">│   ├── objenesis-2.1.jar</div><div class="line">│   ├── paranamer-2.3.jar</div><div class="line">│   ├── protobuf-java-2.5.0.jar</div><div class="line">│   ├── servlet-api-2.5.jar</div><div class="line">│   ├── snappy-java-1.0.4.1.jar</div><div class="line">│   ├── stax-api-1.0-2.jar</div><div class="line">│   ├── xmlenc-0.52.jar</div><div class="line">│   ├── xz-1.0.jar</div><div class="line">│   ├── zookeeper-3.4.6.2.4.0.0-169.jar</div><div class="line">│   └── zookeeper-3.4.6.2.4.0.0-169-tests.jar</div><div class="line">└── sbin</div><div class="line">    ├── yarn-daemon.sh</div><div class="line">    └── yarn-daemons.sh</div></pre></td></tr></table></figure>
-<p>##更新官方rpm安装后的文件</p>
-<ul>
-<li>依照Hortonworks官方rpm安装后的文件目录为标准，将我们自己编译的文件复制到相应目录进行替换，编写脚本自动实现从编译到更新文件的工作，针对hadoop-yarn项目的脚本如下：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="comment">#rebuild hadoop-yarn rpm package</span></div><div class="line"><span class="comment">#1. Make sure hdp rpm package has been installed.</span></div><div class="line"><span class="comment">#2. Prepare hdp source code. Modify the BUILD_SOURCE_DIR point to your source code folder.</span></div><div class="line"><span class="comment">#3. Prepare the build environment: rpmrebuild maven "Development Tools" autoconf automake libtool cmake zlib1g-dev pkg-config libssl-dev libprotobuf-dev protobuf-compiler</span></div><div class="line"></div><div class="line">RPM_NAME=hadoop_2_4_0_0_169-yarn-2.7.1.2.4.0.0-169.el6.x86_64</div><div class="line">HDP_VERSION=2.4.0.0-169</div><div class="line">HDP_YARN_VERSION=2.7.1.2.4.0.0-169</div><div class="line">HADOOP_INSTALL_DIR=/usr/hdp/<span class="variable">$HDP_VERSION</span>/</div><div class="line">BUILD_SOURCE_DIR=/data/ygmz/hadoop-release</div><div class="line">BUILD_TARGET_DIR=<span class="variable">$BUILD_SOURCE_DIR</span>/hadoop-yarn-project/target/hadoop-yarn-project-<span class="variable">$HDP_YARN_VERSION</span></div><div class="line"></div><div class="line"><span class="comment">#build yarn binary from source code, profile native used to build container-executor.</span></div><div class="line"><span class="built_in">cd</span> <span class="variable">$BUILD_SOURCE_DIR</span>/hadoop-yarn-project</div><div class="line">mvn clean</div><div class="line">mvn package -Pdist,native -DskipTests -Dtar</div><div class="line"></div><div class="line"><span class="comment">#move self-build files to rpm install directories</span></div><div class="line"></div><div class="line"><span class="comment">#move to etc/hadoop/conf.empty/</span></div><div class="line">rm -rf <span class="variable">$BUILD_TARGET_DIR</span>/etc/hadoop/*.cmd</div><div class="line">mkdir -p <span class="variable">$HADOOP_INSTALL_DIR</span>/etc/hadoop/conf.empty</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/etc/hadoop/* <span class="variable">$HADOOP_INSTALL_DIR</span>/etc/hadoop/conf.empty/</div><div class="line"></div><div class="line"><span class="comment">#move to etc/security</span></div><div class="line"></div><div class="line"><span class="comment">#move to hadoop</span></div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/libexec/yarn-config.sh <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop/libexec/</div><div class="line"></div><div class="line"><span class="comment">#move to hadoop-yarn</span></div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/bin/yarn <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/bin/yarn.distro</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/bin/container-executor <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/bin/</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/share/hadoop/yarn/*.jar <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/share/hadoop/yarn/lib/*.jar <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/lib/</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/sbin/yarn-daemon.sh <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/sbin/</div><div class="line">cp -rf <span class="variable">$BUILD_TARGET_DIR</span>/sbin/yarn-daemons.sh <span class="variable">$HADOOP_INSTALL_DIR</span>/hadoop-yarn/sbin/</div></pre></td></tr></table></figure>
-<p>##使用rpmrebuild将更新后的文件重新打包成rpm</p>
-<ul>
-<li>rpmrebuild是一个用来重新打包rpm的第三方开源工具, 可以将已安装的rpm包按照原rpm的方式重新打包，%pre，%post，%files等部分的脚本保持不变，因此在我们使用自己编译的文件替换官方rpm安装好的文件后，可以直接使用rpmrebuild进行重新打包。  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#rebuild rpm</div><div class="line">rpmrebuild $RPM_NAME</div></pre></td></tr></table></figure>
-<ul>
-<li>$RPM_NAME 可以使用rpm -qa查询得到</li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
+    <time datetime="2016-06-30T08:35:59.000Z" itemprop="datePublished">2016-06-30</time>
+  </a>
+</section>
 
 
 </div>
@@ -287,42 +102,11 @@
 
   
 
-
   
-
-  
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="null" target="_blank" title="rss">RSS</a>
 </div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
 
 </aside>
 </div>
@@ -335,42 +119,21 @@
 	</div>
 	
 	
-	<section class="info">
-		<p> Hello ,I&#39;m Larry Page in Google. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		
-		
-		
+	<div class="social-font clearfix">
 		
 		
 		
 		
 		
 	</div>
-			
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
 		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
-		
-		<a href="/about" target="_blank" title="John Doe">John Doe</a>
-		
+		<a href="http://yoursite.com" target="_blank" title="John Doe">John Doe</a>
 		
 		</p>
 </div>
 </footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
+    <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -388,6 +151,18 @@ $(document).ready(function(){
       a = $('#asidepart'),
       c = $('.closeaside'),
       o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
   c.click(function(){
     a.addClass('fadeOut').css('display', 'none');
     o.css('display', 'block').addClass('fadeIn');
@@ -401,18 +176,6 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
 });
 </script>
 
@@ -421,69 +184,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
 
   </body>
  </html>
