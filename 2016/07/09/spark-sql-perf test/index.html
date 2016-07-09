@@ -9,8 +9,7 @@
     
     <meta name="author" content="Galvin Yang">
     
-    <meta name="description" content="##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit
-
+    <meta name="description" content="从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit
 davies/tpcds-kit
 
 git clone https://github.com/davies/tpcds-kit.git
@@ -18,7 +17,7 @@ git clone https://github.com/davies/tpcds-kit.git
 
 
 
-databricks/spark-sq">
+databricks/spark-sql-p">
     
     
     
@@ -45,7 +44,7 @@ databricks/spark-sq">
 				<h1 class="site-name"><a href="/" title="Galvin&#39;s blog">Galvin&#39;s blog</a></h1>
 				<h2 class="blog-motto">Embrace Bigdata &amp; Cloud</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -58,7 +57,7 @@ databricks/spark-sq">
 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -81,8 +80,8 @@ databricks/spark-sq">
       <a href="http://yoursite.com" title="Galvin Yang">Galvin Yang</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-07-09T02:25:21.000Z" itemprop="datePublished">2016-07-09</time>
-    Updated:<time datetime="2016-07-09T02:25:21.000Z" itemprop="dateModified">2016-07-09</time>
+    <time datetime="2016-07-09T02:26:31.000Z" itemprop="datePublished">2016-07-09</time>
+    更新日期:<time datetime="2016-07-09T02:26:31.000Z" itemprop="dateModified">2016-07-09</time>
     
   </p>
 </header>
@@ -90,12 +89,11 @@ databricks/spark-sq">
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol>
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#从github上获取-databricks-spark-sql-perf-与-davies-tpcds-kit"><span class="toc-number">1.</span> <span class="toc-text">从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用tpcds-kit"><span class="toc-number">2.</span> <span class="toc-text">使用tpcds-kit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Spark-sql-perf"><span class="toc-number">3.</span> <span class="toc-text">使用Spark-sql-perf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">3.1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">3.2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol></li></ol>
 		</div>
 		
-		<p>##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</p>
-<ul>
+		<h2 id="从github上获取-databricks-spark-sql-perf-与-davies-tpcds-kit"><a href="#从github上获取-databricks-spark-sql-perf-与-davies-tpcds-kit" class="headerlink" title="从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit"></a>从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</h2><ul>
 <li>davies/tpcds-kit<ul>
 <li><ul>
 <li>git clone <a href="https://github.com/davies/tpcds-kit.git" target="_blank" rel="external">https://github.com/davies/tpcds-kit.git</a></li>
@@ -111,8 +109,7 @@ databricks/spark-sq">
 </ul>
 </li>
 </ul>
-<p>##使用tpcds-kit</p>
-<ul>
+<h2 id="使用tpcds-kit"><a href="#使用tpcds-kit" class="headerlink" title="使用tpcds-kit"></a>使用tpcds-kit</h2><ul>
 <li>编译源代码，Spark-sql-perf 会调用该工具生成数据</li>
 </ul>
 <blockquote>
@@ -126,8 +123,7 @@ databricks/spark-sq">
 </li>
 </ul>
 </blockquote>
-<p>##使用Spark-sql-perf</p>
-<h3 id="编译源代码"><a href="#编译源代码" class="headerlink" title="编译源代码"></a>编译源代码</h3><ul>
+<h2 id="使用Spark-sql-perf"><a href="#使用Spark-sql-perf" class="headerlink" title="使用Spark-sql-perf"></a>使用Spark-sql-perf</h2><h3 id="编译源代码"><a href="#编译源代码" class="headerlink" title="编译源代码"></a>编译源代码</h3><ul>
 <li>需要使用到sbt编译工具：<pre><code>`curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo`
 `sudo yum install sbt`
 </code></pre></li>
@@ -186,15 +182,15 @@ databricks/spark-sq">
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol>
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#从github上获取-databricks-spark-sql-perf-与-davies-tpcds-kit"><span class="toc-number">1.</span> <span class="toc-text">从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用tpcds-kit"><span class="toc-number">2.</span> <span class="toc-text">使用tpcds-kit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Spark-sql-perf"><span class="toc-number">3.</span> <span class="toc-text">使用Spark-sql-perf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">3.1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">3.2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -202,7 +198,7 @@ databricks/spark-sq">
   
 
   <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS</a>
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
