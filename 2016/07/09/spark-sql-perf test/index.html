@@ -4,16 +4,21 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Galvin&#39;s blog</title>
+    <title>使用Spark-sql-perf测试spark-sql 2.0 | Galvin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Galvin Yang">
     
-    <meta name="description" content="title：Use Spark-sql-perf to test sql##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit
+    <meta name="description" content="##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit
 
 davies/tpcds-kit
 
-git clone https://github.com/davies/t">
+git clone https://github.com/davies/tpcds-kit.git
+
+
+
+
+databricks/spark-sq">
     
     
     
@@ -69,15 +74,15 @@ git clone https://github.com/davies/t">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/09/spark-sql-perf test/" title="" itemprop="url"></a>
+      <a href="/2016/07/09/spark-sql-perf test/" title="使用Spark-sql-perf测试spark-sql 2.0" itemprop="url">使用Spark-sql-perf测试spark-sql 2.0</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Galvin Yang">Galvin Yang</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-07-09T02:22:24.000Z" itemprop="datePublished">2016-07-09</time>
-    Updated:<time datetime="2016-07-09T02:22:29.000Z" itemprop="dateModified">2016-07-09</time>
+    <time datetime="2016-07-09T02:25:21.000Z" itemprop="datePublished">2016-07-09</time>
+    Updated:<time datetime="2016-07-09T02:25:21.000Z" itemprop="dateModified">2016-07-09</time>
     
   </p>
 </header>
@@ -86,11 +91,10 @@ git clone https://github.com/davies/t">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：Use-Spark-sql-perf-to-test-sql"><span class="toc-number">1.</span> <span class="toc-text">title：Use Spark-sql-perf to test sql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">1.2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol>
 		</div>
 		
-		<hr>
-<h2 id="title：Use-Spark-sql-perf-to-test-sql"><a href="#title：Use-Spark-sql-perf-to-test-sql" class="headerlink" title="title：Use Spark-sql-perf to test sql"></a>title：Use Spark-sql-perf to test sql</h2><p>##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</p>
+		<p>##从github上获取 databricks/spark-sql-perf 与 davies/tpcds-kit</p>
 <ul>
 <li>davies/tpcds-kit<ul>
 <li><ul>
@@ -160,7 +164,7 @@ git clone https://github.com/davies/t">
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/07/09/spark-sql-perf test/" data-title="Galvin&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/07/09/spark-sql-perf test/" data-title="使用Spark-sql-perf测试spark-sql 2.0 | Galvin&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -186,7 +190,7 @@ git clone https://github.com/davies/t">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title：Use-Spark-sql-perf-to-test-sql"><span class="toc-number">1.</span> <span class="toc-text">title：Use Spark-sql-perf to test sql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">1.2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译源代码"><span class="toc-number">1.</span> <span class="toc-text">编译源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行TPCDS测试"><span class="toc-number">2.</span> <span class="toc-text">运行TPCDS测试</span></a></li></ol>
   </div>
 
 <div id="asidepart">
