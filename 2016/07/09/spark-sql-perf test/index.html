@@ -80,8 +80,8 @@ databricks/spark-sql-p">
       <a href="http://yoursite.com" title="Galvin Yang">Galvin Yang</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-07-09T02:28:11.000Z" itemprop="datePublished">2016-07-09</time>
-    Updated:<time datetime="2016-07-09T02:28:11.000Z" itemprop="dateModified">2016-07-09</time>
+    <time datetime="2016-07-09T02:31:20.000Z" itemprop="datePublished">2016-07-09</time>
+    Updated:<time datetime="2016-07-09T02:31:20.000Z" itemprop="dateModified">2016-07-09</time>
     
   </p>
 </header>
@@ -137,10 +137,11 @@ databricks/spark-sql-p">
 </ul>
 <h3 id="运行TPCDS测试"><a href="#运行TPCDS测试" class="headerlink" title="运行TPCDS测试"></a>运行TPCDS测试</h3><ul>
 <li>更改spark.env中默认的driver内存限制，本次测试中改为20G：<br><code>SPARK_DRIVER_MEMORY=&quot;20G&quot; #Memory for Master (e.g. 1000M, 2G) (Default: 512 Mb)</code></li>
-<li><p>进入spark2.0的spark-shell，指定在yarn上运行，指定executor数量与内存等参数：<br><code>/usr/hdp/2.4.0.0-169/spark-2.0.0-preview-bin-hadoop2.7/bin/spark-shell --jars /data/ygmz/sparksqlperf/spark-sql-perf/target/scala-2.11/spark-sql-perf_2.11-0.4.3.jar --num-executors 20 --executor-cores 2 --executor-memory 8G --master yarn-client</code></p>
-</li>
-<li><p>从sc生成sqlcontext</p>
-</li>
+<li>进入spark2.0的spark-shell，指定在yarn上运行，指定executor数量与内存等参数：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/hdp/2.4.0.0-169/spark-2.0.0-preview-bin-hadoop2.7/bin/spark-shell </div><div class="line">--jars /data/ygmz/sparksqlperf/spark-sql-perf/target/scala-2.11/spark-sql-perf_2.11-0.4.3.jar </div><div class="line">--num-executors 20 --executor-cores 2 --executor-memory 8G --master yarn-client</div></pre></td></tr></table></figure>
+<ul>
+<li>从sc生成sqlcontext</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">val sc: SparkContext // 运行spark-shell后应该已经创建</div><div class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</div><div class="line"></div><div class="line">// this is used to implicitly convert an RDD to a DataFrame.</div><div class="line">import sqlContext.implicits._</div></pre></td></tr></table></figure>
 <ul>
