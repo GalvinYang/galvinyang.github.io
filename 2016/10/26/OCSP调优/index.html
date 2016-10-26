@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Galvin&#39;s blog</title>
+    <title>Spark Streaming 调优 | Galvin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Galvin Yang">
     
-    <meta name="description" content="#Spark Streaming 调优#本文档使用的样本数据量有效信令大约每分钟100-120w条，每分钟数据总大小约200MB
-##flume##
-
-flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不用太大，需要调大">
+    <meta name="description" content="本文档使用的样本数据量有效信令大约每分钟100-120w条，每分钟数据总大小约200MB
+flume
+flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不用太大，需要调大kafka sink的取消息速度，减少channe">
     
     
     
@@ -68,15 +67,15 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/26/OCSP调优/" title="" itemprop="url"></a>
+      <a href="/2016/10/26/OCSP调优/" title="Spark Streaming 调优" itemprop="url">Spark Streaming 调优</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Galvin Yang">Galvin Yang</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-10-26T07:17:32.000Z" itemprop="datePublished">2016-10-26</time>
-    Updated:<time datetime="2016-10-26T07:17:32.000Z" itemprop="dateModified">2016-10-26</time>
+    <time datetime="2016-10-26T07:28:29.000Z" itemprop="datePublished">2016-10-26</time>
+    Updated:<time datetime="2016-10-26T07:28:29.000Z" itemprop="dateModified">2016-10-26</time>
     
   </p>
 </header>
@@ -85,21 +84,18 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#flume"><span class="toc-number">1.</span> <span class="toc-text">flume</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kafka"><span class="toc-number">2.</span> <span class="toc-text">Kafka</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spark"><span class="toc-number">3.</span> <span class="toc-text">Spark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codis"><span class="toc-number">4.</span> <span class="toc-text">Codis</span></a></li></ol>
 		</div>
 		
-		<p>#Spark Streaming 调优#<br><strong>本文档使用的样本数据量有效信令大约每分钟100-120w条，每分钟数据总大小约200MB</strong></p>
-<p>##flume##</p>
-<ul>
+		<p>本文档使用的样本数据量有效信令大约每分钟100-120w条，每分钟数据总大小约200MB</p>
+<h2 id="flume"><a href="#flume" class="headerlink" title="flume"></a>flume</h2><ul>
 <li>flume channel capacity 默认1000，调整为1000000 <figure class="highlight plain"><figcaption><span>= 1000```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- channel size不用太大，需要调大kafka sink的取消息速度，减少channel的积压```a1.sinks.k1.batchSize = 100000</div></pre></td></tr></table></figure></li>
 </ul>
-<p>##Kafka##</p>
-<ul>
+<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><ul>
 <li>目前使用200个partition，10个broker. 在建立topic的时候指定</li>
 <li><strong>注意：kafka的partition有可能因为数据源的问题发生倾斜</strong></li>
 </ul>
-<p>##Spark##</p>
-<ul>
+<h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><ul>
 <li><p>根据需要调整executor的内存，数量，以及核数（核数指每个executor可以并行的线程数，每个线程对应一个spark的task）</p>
 <blockquote>
 <ol>
@@ -110,8 +106,7 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 <li><p>Driver内存够用即可</p>
 </li>
 </ul>
-<p>##Codis##</p>
-<ul>
+<h2 id="Codis"><a href="#Codis" class="headerlink" title="Codis"></a>Codis</h2><ul>
 <li>使用10个redis-server分布在10台机器上，codis每个group包括一个redis-server，分配约100个slot，使用10个codis-proxy，与10台redis-server的机器复用</li>
 <li>Codis-proxy cpu核数：ncpu=8, 该参数在启动codis-proxy时指定 </li>
 </ul>
@@ -124,7 +119,7 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/10/26/OCSP调优/" data-title="Galvin&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/10/26/OCSP调优/" data-title="Spark Streaming 调优 | Galvin&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -133,19 +128,11 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/10/26/Codis部署/" title="部署codis">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  部署codis</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/10/26/Yarn Label配置/"  title="">
+<a href="/2016/10/26/Yarn Label配置/"  title="Yarn Node Label 配置">
  <strong>NEXT:</strong><br/> 
- <span>(no title)
+ <span>Yarn Node Label 配置
 </span>
 </a>
 </div>
@@ -158,7 +145,7 @@ flume channel capacity 默认1000，调整为1000000 = 1000```1- channel size不
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#flume"><span class="toc-number">1.</span> <span class="toc-text">flume</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kafka"><span class="toc-number">2.</span> <span class="toc-text">Kafka</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spark"><span class="toc-number">3.</span> <span class="toc-text">Spark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codis"><span class="toc-number">4.</span> <span class="toc-text">Codis</span></a></li></ol>
   </div>
 
 <div id="asidepart">
